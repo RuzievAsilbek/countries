@@ -1,3 +1,9 @@
+/* CUSTOM PROPERTIES */
+:root {
+  --body-bg: #fafafa;
+  --element-bg: #fff;
+  --text-color: #111517;
+}
 /* GLOBAL */
 html {
   box-sizing: border-box;
@@ -14,14 +20,14 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  font-size: 16px;
+  font-size: 14px;
   padding: 0;
   margin: 0;
-  line-height: 1.5;
-  font-family: "Arial", sans-serif;
+  line-height: 16px;
+  font-family: "Nunito Sans", "Arial", sans-serif;
   height: 100%;
-  background-color: #fff;
-  color: #222;
+  background-color: var(--body-bg);
+  color: var(--text-color);
 }
 
 img {
@@ -29,12 +35,24 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* DARK-MODE  */
+
+.dark-mode{
+  --body-bg: #202C36;
+  --element-bg: #2B3844;
+  --text-color: #fff;
+}
+
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-right: 50px;
-  padding-left: 50px;
+  max-width: 1320px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -43,48 +61,4 @@ img {
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
-}
-
-.wall {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(/img/Wall.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.rom {
-  display: flex;
-  border: 20px ridge rgb(221, 91, 15);
-  box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.8);
-  background-image: url(/img/interior.jpg);
-  background-size: cover;
-  background-position: center center;
-}
-
-.tabaqa {
-  width: 150px;
-  height: 300px;
-  border: 20px ridge rgb(221, 91, 15);
-  background-color: rgb(0, 0, 0, 0.6);
-  transition: transform 1s ease;
-}
-
-
-.tabaqa-lift {
-  transform-origin: left center;
-}
-
-.tabaqa-right {
-  transform-origin: right center;
-}
-
-
-.rom:hover .tabaqa-lift {
-  transform: perspective(2000px) rotateY(-125deg);
-}
-
-.rom:hover .tabaqa-right {
-  transform: perspective(2000px) rotateY(125deg);
 }
