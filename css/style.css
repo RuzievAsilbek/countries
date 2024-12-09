@@ -101,6 +101,7 @@ a {
 .site-header-theme-toggler {
   padding: 0;
   border: 0;
+  border-radius: 10px;
   background-color: transparent;
   cursor: pointer;
   color: var(--text-color);
@@ -108,6 +109,8 @@ a {
 
 .site-header-theme-toggler:hover {
   opacity: 0.8;
+  background-color: var(--text-color);
+  color: var(--element-bg);
 }
 
 .site-header-theme-toggler:active {
@@ -117,6 +120,7 @@ a {
 .site-header-theme-toggler-inner {
   display: flex;
   align-items: center;
+  padding: 8px;
 }
 
 .site-header-theme-toggler-inner img {
