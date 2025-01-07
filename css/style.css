@@ -143,6 +143,7 @@ a {
 /* FILTERS */
 
 .filters {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -150,6 +151,15 @@ a {
     color var(--transition-duration) ease;
     margin-bottom: 48px;
 }
+
+.filtres-search-icon {
+  position: absolute;
+  top: 19px;
+  left: 32px;
+  color: var(--text-color);
+  pointer-events: none;
+}
+
 .filters-search-input {
   padding: 18px 74px;
   min-width: 480px;
